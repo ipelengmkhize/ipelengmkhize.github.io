@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Management Live | Ipeleng Mkhize</title>
+  <meta name="description" content="Case study: designing and building a real-time work-tracking dashboard for an IT service-management team.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="../assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main">
+      <a class="brand" href="../index.html">Ipeleng<span>.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#work">Work</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <div style="display:flex; gap:8px;">
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="case-hero">
+      <div class="container">
+        <a class="back" href="../index.html#work">&larr; Back to projects</a>
+        <p class="eyebrow">Case study</p>
+        <h1>Service Management Live</h1>
+        <p class="lead" style="margin-top:20px;">
+          A real-time dashboard that gives an IT service-management team one shared,
+          always-current view of who is doing what, what's overdue, and where work is stuck.
+        </p>
+        <div class="case-meta">
+          <div><small>Role</small><strong>Designer &amp; developer</strong></div>
+          <div><small>Type</small><strong>Internal web app</strong></div>
+          <div><small>Year</small><strong>2026</strong></div>
+          <div><small>Stack</small><strong>JS &middot; CSS &middot; TS &middot; WebSockets</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <figure class="snippet">
+        <div class="sml" role="img" aria-label="Service Management Live overview screen: KPI tiles and a project health card" style="padding:0;">
+          <div class="sml-frame">
+            <div class="sml-side">
+              <div class="sml-logo">Service Management Live</div>
+              <div class="sml-nav active">Overview</div>
+              <div class="sml-nav">Oversight</div>
+              <div class="sml-nav">Board</div>
+              <div class="sml-nav">Activity</div>
+              <div class="sml-nav">Team</div>
+              <div class="sml-nav">Feedback</div>
+            </div>
+            <div class="sml-main">
+              <div class="sml-title">Overview <span class="live-dot">Live</span></div>
+              <div class="sml-kpis">
+                <div class="sml-kpi"><div class="sml-kpi-label">Tasks</div><div class="sml-kpi-value">24</div><div class="sml-kpi-sub">8 to do &middot; 9 in progress</div></div>
+                <div class="sml-kpi"><div class="sml-kpi-label">Overall progress</div><div class="sml-kpi-value">58%</div><div class="sml-kpi-sub">done counts full, in progress half</div></div>
+                <div class="sml-kpi risk"><div class="sml-kpi-label">At risk</div><div class="sml-kpi-value">2</div><div class="sml-kpi-sub">plus 3 due within 3 days</div></div>
+              </div>
+              <div class="sml-project">
+                <div class="sml-project-head"><span class="sml-project-name">Self-service portal</span><span class="sml-project-tasks">9 tasks</span><span class="sml-project-pct">67%</span></div>
+                <div class="sml-meter"><i style="width:67%"></i></div>
+                <div class="sml-counts"><span><i class="sml-sw todo"></i>2 to do</span><span><i class="sml-sw progress"></i>2 in progress</span><span><i class="sml-sw done"></i>5 done</span><span><i class="sml-sw late"></i>1 late</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <figcaption><strong>Overview.</strong> Every KPI tile can be clicked: "At risk 2" opens exactly the projects holding those two late tasks. Recreated from the app's own components, with sample data.</figcaption>
+      </figure>
+    </div>
+
+    <div class="container">
+      <section class="case-section prose">
+        <p class="eyebrow">The problem</p>
+        <h2>Work was invisible until it was late</h2>
+        <p>
+          The team tracked work across spreadsheets, chat threads and memory. Nobody had a single
+          view of progress. Hand-offs between people got lost, overdue items only came up in
+          meetings, and managers had to ask around to find out what was blocked.
+        </p>
+        <p>
+          The goal was a tool the whole team would actually keep open: fast, obvious to use,
+          and always showing the same, current picture to everyone.
+        </p>
+      </section>
+
+      <section class="case-section">
+        <p class="eyebrow">What I built</p>
+        <h2>From the app</h2>
+        <div class="snippets">
+          <div class="snippet-pair">
+            <figure class="snippet">
+              <div class="sml" role="img" aria-label="Task board rows with status, priority and due date">
+                <div class="sml-rows">
+                  <div class="sml-row head"><div>Task</div><div></div><div>Status</div><div>Priority</div><div>Due</div></div>
+                  <div class="sml-row late"><div><div class="sml-task">Update escalation matrix</div><div class="sml-why">Needed before the next audit</div></div><div><span class="sml-avatar">TM</span></div><div><span class="sml-pill progress">In progress</span></div><div><span class="sml-prio high">High</span></div><div><span class="sml-due overdue">2 days late</span></div></div>
+                  <div class="sml-row"><div><div class="sml-task">Review SLA report</div></div><div><span class="sml-avatar">KN</span></div><div><span class="sml-pill todo">To do</span></div><div><span class="sml-prio medium">Medium</span></div><div><span class="sml-due soon">Due today</span></div></div>
+                  <div class="sml-row"><div><div class="sml-task">Publish KB articles</div></div><div><span class="sml-avatar">LD</span></div><div><span class="sml-pill done">Done</span></div><div><span class="sml-prio">Low</span></div><div><span class="sml-due">12 Oct</span></div></div>
+                </div>
+              </div>
+              <figcaption><strong>Task board.</strong> Status is the only strong colour on the row. Priority is a dot with a label, and late rows get a red edge so they stand out when you scan the list.</figcaption>
+            </figure>
+            <figure class="snippet">
+              <div class="sml" role="img" aria-label="Alert cards: an escalated overdue task and a hand-off">
+                <div class="sml-alert late">
+                  <div class="sml-alert-head">Update escalation matrix <span class="sml-chip late">Overdue</span><span class="sml-chip esc">Escalated</span></div>
+                  <p>2 days past due. Escalated to the team manager.</p>
+                </div>
+                <div class="sml-alert handoff">
+                  <div class="sml-alert-head">Publish KB articles <span class="sml-chip handoff">Hand-off</span></div>
+                  <p>Marked done. You're up next: review and sign off.</p>
+                </div>
+              </div>
+              <figcaption><strong>Alerts.</strong> Overdue work alerts its owner and escalates to a manager if it stays late. Completing a task hands the next step to a named teammate.</figcaption>
+            </figure>
+          </div>
+        </div>
+        <p class="section-intro" style="margin-top:28px;">
+          Also included: a manager oversight view, auto-archiving with Excel export, a view-only mode for wall screens, and an optional AI "Get ideas" assistant.
+        </p>
+      </section>
+
+      <section class="case-section">
+        <p class="eyebrow">Hard problems</p>
+        <h2>Challenges &amp; how I solved them</h2>
+
+        <div class="challenge">
+          <div class="label">01 / Data integrity</div>
+          <div>
+            <h3>Two people saving at once wiped each other's work</h3>
+            <p>
+              Early on, every save sent the whole document. If two people edited at the same time,
+              the last save quietly overwrote the first, with no error and no warning.
+            </p>
+            <p>
+              <strong>Fix:</strong> I reproduced it first: two clients each added a task, and only one survived.
+              Then I changed saves to send only what changed. The server merges those changes into
+              the current state per entity, so editing task 4 can't erase someone else's change to task 7.
+              Logs merge by identity rather than being replaced, and ID counters take the highest value
+              so two people can't create tasks with the same ID.
+            </p>
+          </div>
+        </div>
+
+        <div class="challenge">
+          <div class="label">02 / Real-time UX</div>
+          <div>
+            <h3>Everyone needs the same picture, instantly</h3>
+            <p>
+              A shared dashboard stops being useful once people stop trusting that it's current.
+              Asking people to refresh isn't good enough.
+            </p>
+            <p>
+              <strong>Fix:</strong> I added a WebSocket channel that pushes every change to all connected
+              browsers, so updates show up for the whole team as soon as they happen. Each view
+              re-renders from the shared state, which keeps the UI consistent everywhere.
+            </p>
+          </div>
+        </div>
+
+        <div class="challenge">
+          <div class="label">03 / Security</div>
+          <div>
+            <h3>User text must never become code</h3>
+            <p>
+              Task titles, notes and feedback are all free text written by users, and they get rendered
+              back into the page. That's a classic cross-site scripting (XSS) risk.
+            </p>
+            <p>
+              <strong>Fix:</strong> Every piece of user text goes through dedicated HTML and attribute
+              escaping helpers before it is rendered. For the AI assistant, the API key stays on the
+              server, only the typed question is sent, and the feature turns itself off completely
+              if it hasn't been configured.
+            </p>
+          </div>
+        </div>
+
+        <div class="challenge">
+          <div class="label">04 / Design system</div>
+          <div>
+            <h3>Making a large UI feel deliberate</h3>
+            <p>
+              As features piled up, the interface collected inconsistent styles. At one point it used
+              eight different corner radii, and nothing looked intentional.
+            </p>
+            <p>
+              <strong>Fix:</strong> I replaced them with a small set of CSS design tokens (three radii,
+              one shared colour palette), so changing a single value updates the whole app. I also
+              self-hosted the fonts so the app has no CDN dependency inside the bank's network, and
+              added ARIA labels to the visual progress meters for screen-reader users.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section prose">
+        <p class="eyebrow">Delivery</p>
+        <h2>Shipped like a real product</h2>
+        <ul>
+          <li>Built through a pull-request workflow with code review and branch protection.</li>
+          <li>Served by a Node.js / Fastify + TypeScript backend with Zod-validated APIs.</li>
+          <li>Packaged with Docker and deployed to Kubernetes through a GitOps pipeline (ArgoCD).</li>
+          <li>Found and fixed production issues, including file permissions inside the container that stopped saves from working, by tracing each one to its root cause.</li>
+        </ul>
+      </section>
+
+      <section class="case-section prose">
+        <p class="eyebrow">Outcome</p>
+        <h2>What changed</h2>
+        <!-- EDIT ME: add real, shareable numbers if you have them, e.g. team size, daily users, fewer status meetings. -->
+        <p>
+          The team now works from one live board. Overdue work comes up on its own instead of
+          being found in meetings, hand-offs come with a notification, and managers can see the
+          state of every project without chasing anyone.
+        </p>
+      </section>
+
+      <section class="case-section prose">
+        <p class="eyebrow">Reflection</p>
+        <h2>What I learned</h2>
+        <ul>
+          <li><strong>Reproduce before you fix.</strong> The data-loss bug was invisible until I could reliably trigger it.</li>
+          <li><strong>Real-time changes how you design.</strong> When updates arrive from other people, your state model has to expect it.</li>
+          <li><strong>Consistency is a system, not a habit.</strong> Design tokens made the UI coherent in a way that careful hand-styling never did.</li>
+          <li><strong>Security belongs in the front end too.</strong> Escaping user content and keeping secrets off the client are part of the job.</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="next-project">
+      <div class="container">
+        <h2>Like what you see?</h2>
+        <div class="btn-row" style="justify-content:center;">
+          <a class="btn btn-primary" href="../index.html#contact">Get in touch</a>
+          <a class="btn btn-secondary" href="../index.html#work">Back to projects</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; <span data-year>2026</span> Ipeleng Mkhize</span>
+      <span>Hand-built with HTML, CSS &amp; JavaScript, with no frameworks</span>
+    </div>
+  </footer>
+</body>
+</html>

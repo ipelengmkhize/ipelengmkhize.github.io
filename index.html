@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ipeleng Mkhize | Front-End Developer</title>
+  <meta name="description" content="Portfolio of Ipeleng Mkhize, an aspiring front-end developer in the service management space.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main">
+      <a class="brand" href="#top">Ipeleng<span>.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div style="display:flex; gap:8px;">
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container">
+        <span class="status-pill">Aspiring front-end developer &middot; Service management</span>
+        <h1>Hi, I'm Ipeleng.<br>I build interfaces <span class="accent">teams actually use.</span></h1>
+        <p class="lead">
+          I'm looking to become a front-end developer within the service management space,
+          building the tools I know teams need. My latest build is <strong>Service Management Live</strong>,
+          a live work-tracking dashboard for an IT service-management team.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="projects/service-management-live.html">View case study &rarr;</a>
+          <a class="btn btn-secondary" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2>From service management to shipping the tools myself</h2>
+          <!-- EDIT ME: make this your own story, in your own words. -->
+          <p>
+            I work in IT service management, so I know the problems these tools are meant to solve:
+            unclear ownership, work getting dropped during hand-offs, and managers who can't
+            see what is overdue. I stopped waiting for someone else to build the fix and built it myself.
+          </p>
+          <p>
+            I like the whole front-end job: getting the layout and visual details right, keeping the
+            interface fast and accessible, and getting state to behave when several people are
+            editing at once. I learn by shipping real tools to real users and fixing what breaks.
+          </p>
+        </div>
+        <ul class="fact-list" aria-label="Quick facts">
+          <li><span>Goal</span><span>Front-end developer in service management</span></li>
+          <li><span>Core stack</span><span>HTML, CSS, JavaScript, TypeScript</span></li>
+          <li><span>Currently</span><span>IT Service Management</span></li>
+          <!-- EDIT ME: replace with your city -->
+          <li><span>Based in</span><span>South Africa</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <p class="eyebrow">Skills</p>
+        <h2>What I work with</h2>
+        <p class="section-intro">Tools and techniques I've used in production, not just in tutorials.</p>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>Front end</h3>
+            <ul class="tags">
+              <li>HTML5</li><li>CSS3</li><li>JavaScript (ES2023)</li><li>TypeScript</li>
+              <li>Responsive layout</li><li>CSS custom properties</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>UX &amp; quality</h3>
+            <ul class="tags">
+              <li>Accessibility (ARIA)</li><li>Design tokens</li><li>XSS-safe rendering</li>
+              <li>Performance</li><li>UX assessment</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Real-time &amp; data</h3>
+            <ul class="tags">
+              <li>WebSockets</li><li>REST APIs</li><li>State merging</li>
+              <li>Zod validation</li><li>Excel export</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Tooling &amp; delivery</h3>
+            <ul class="tags">
+              <li>Git &amp; GitHub</li><li>Pull-request workflow</li><li>Node.js / Fastify</li>
+              <li>Docker</li><li>Kubernetes / ArgoCD</li><li>AI-assisted dev</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work">
+      <div class="container">
+        <p class="eyebrow">Selected work</p>
+        <h2>Projects</h2>
+        <p class="section-intro">Each project comes with a write-up covering the problem, the decisions I made and what I learned.</p>
+
+        <article class="project-feature">
+          <div class="project-body">
+            <p class="eyebrow">Featured &middot; Internal tool &middot; 2026</p>
+            <h3>Service Management Live</h3>
+            <p>
+              A real-time work-tracking dashboard for an IT service-management team. It covers
+              projects, a task board, overdue alerts with escalation, manager oversight and
+              hand-offs, and every change syncs live to everyone who has it open.
+            </p>
+            <ul class="tags">
+              <li>JavaScript</li><li>CSS</li><li>WebSockets</li><li>TypeScript</li><li>Fastify</li><li>Docker</li>
+            </ul>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="projects/service-management-live.html">Read the case study &rarr;</a>
+            </div>
+          </div>
+          <div class="project-visual">
+            <!-- Recreated from the real app's Overview screen and stylesheet; sample data. -->
+            <div class="sml" role="img" aria-label="Service Management Live overview: KPI tiles and a project health card">
+              <div class="sml-frame">
+                <div class="sml-side">
+                  <div class="sml-logo">Service Management Live</div>
+                  <div class="sml-nav active">Overview</div>
+                  <div class="sml-nav">Oversight</div>
+                  <div class="sml-nav">Board</div>
+                  <div class="sml-nav">Activity</div>
+                </div>
+                <div class="sml-main">
+                  <div class="sml-title">Overview <span class="live-dot">Live</span></div>
+                  <div class="sml-kpis">
+                    <div class="sml-kpi"><div class="sml-kpi-label">Tasks</div><div class="sml-kpi-value">24</div><div class="sml-kpi-sub">8 to do &middot; 9 in progress</div></div>
+                    <div class="sml-kpi"><div class="sml-kpi-label">Overall progress</div><div class="sml-kpi-value">58%</div><div class="sml-kpi-sub">across all projects</div></div>
+                    <div class="sml-kpi risk"><div class="sml-kpi-label">At risk</div><div class="sml-kpi-value">2</div><div class="sml-kpi-sub">past their due date</div></div>
+                  </div>
+                  <div class="sml-project">
+                    <div class="sml-project-head"><span class="sml-project-name">Self-service portal</span><span class="sml-project-tasks">9 tasks</span><span class="sml-project-pct">67%</span></div>
+                    <div class="sml-meter"><i style="width:67%"></i></div>
+                    <div class="sml-counts"><span><i class="sml-sw todo"></i>2 to do</span><span><i class="sml-sw progress"></i>2 in progress</span><span><i class="sml-sw done"></i>5 done</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Add future projects here by copying the <article class="project-feature"> block above. -->
+        <div class="project-placeholder">More projects coming soon. I'm always building something.</div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <h2>Let's build something</h2>
+          <p>I'm looking for front-end developer opportunities within the service management space. If you're hiring or want to talk about a project, I'd love to hear from you.</p>
+          <div class="btn-row">
+            <!-- EDIT ME: replace the placeholders below with your personal email and profile links. -->
+            <a class="btn btn-primary" href="mailto:your.email@example.com">Email me</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn btn-secondary" href="https://github.com/ipelengmkhize" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; <span data-year>2026</span> Ipeleng Mkhize</span>
+      <span>Hand-built with HTML, CSS &amp; JavaScript, with no frameworks</span>
+    </div>
+  </footer>
+</body>
+</html>
